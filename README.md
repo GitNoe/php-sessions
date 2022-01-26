@@ -1,4 +1,4 @@
-# SESIONES en PHP
+# SESIONES en PHP y BASES de DATOS RELACIONALES
 
 Las sesiones son utilizadas en PHP para asociar las diferentes peticiones (inicialmente independientes) de un cliente al servidor. Al iniciar una sesión el servidor asigna y envía al usuario un identificador de sesión, para que así en las siguientes peticiones se envíe ese identificador y el servidor sepa que es el mismo usuario.
 
@@ -58,3 +58,16 @@ Una vez hecho todo esto, cuando insertamos en los campos de login uno de los usu
 ![captura](img-readme/salida_pantalla.png)
 
 Por último se crea el repositorio Github para guardar el proyecto.
+
+## Extra: base de datos con el archivo crear.sql.sql vía phpmyadmin
+
+- Obtención del archivo y copia del mismo en este proyecto para su guardado
+- Importación del archivo en phpmyadmin, se crean las bases de datos y todas sus tablas
+  - doctrine (empleado, empleado_proyectos, equipo, jugador, partido, proyecto)
+  - empresa (departamentos, empleados, usuarios)
+  - pedidos (categorias, pedidos, pedidosproductos, productos, restaurantes)
+- Todo esto se utilizará en futuros ejercicios de php
+
+Como prueba, conectamos este proyecto con la nueva base creada "empresa", y nos salen por pantalla los datos de esa tabla "usuarios", como se puede ver aquí:
+
+![captura](img-readme/salida_pantalla_empresa.png)

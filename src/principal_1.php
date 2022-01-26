@@ -11,6 +11,9 @@ if (!isset($_SESSION['usuario'])) {
 <head>
   <meta charset="UTF-8">
   <title>Página principal</title>
+  <link rel="stylesheet" href="./scss/starter.scss">
+  <link rel="stylesheet" href="../assets/css/starter.css">
+  <link rel="stylesheet" href="../assets/css/starter.css.map">
 </head>
 
 <body>
@@ -22,7 +25,7 @@ if (!isset($_SESSION['usuario'])) {
 
 <?php
 
-$cadena_conexion = 'mysql:dbname=php-sessions;host=127.0.0.1';
+$cadena_conexion = 'mysql:dbname=empresa;host=127.0.0.1';
 $usuario = 'root';
 $contra = 'Usqpj=Z$';
 
@@ -36,7 +39,8 @@ try {
 
   foreach ($usuarios as $row) {
     print $row['nombre'] . "\t";
-    print $row['clave'] . "\t<br>";
+    print $row['clave'] . "\t";
+    print $row['rol'] . "\t<br>";
   }
 } catch (PDOException $e) {
   echo "Error en la base de datos: " . $e->getMessage();
